@@ -20,7 +20,7 @@
   List<User> list =(List<User>) request.getAttribute("userinfo");
   %>
   <h1>欢迎<%=session.getAttribute("Username")%>登录</h1>
-  <table align="center" border="1px" width="200px">
+  <table align="center" border="1px" width="400px">
   <tr><th>ID</th><TH>NAME</TH><TH>PWD</TH><TH>AGE</TH><TH>SEX</TH><TH>操作</TH>
     <%for (User u:list){%>
       <tr>
@@ -29,14 +29,17 @@
     <th><%=u.getPassword()%></th>
     <th><%=u.getAge()%></th>
     <th><%=u.getSex()%></th>
-    <th><a href="UserDeleteServlet?id=<%=u.getId()%>">删除</a>
+    <th>
+      <a href="UserDeleteServlet?id=<%=u.getId()%>">删除</a>
       <a href="UserSelectByIdServlet?id=<%=u.getId()%>">修改</a>
+      <a href="UserSelectById2Servlet?id=<%=u.getId()%>">详情</a>
     </th>
 
       </tr>
     <%}%>
   </tr>
-    <tr><th><a href="userAdd.jsp">增加</a> </th></tr>
+    <th><a href="login.jsp">退出</a> </th>
+    <th><a href="userAdd.jsp">增加</a> </th>
   </table>
   </body>
 </html>

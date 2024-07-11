@@ -61,5 +61,13 @@
         <url-pattern>/UserUpdateServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>userindex</servlet-name>
+        <servlet-class>com.yhq.servlet.UserSelectById2Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userindex</servlet-name>
+        <url-pattern>/UserSelectById2Servlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>
